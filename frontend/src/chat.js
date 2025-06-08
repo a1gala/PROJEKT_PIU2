@@ -216,7 +216,6 @@ function Chat() {
                 });
 
                 if (response.ok) {
-                    ws.current.send(JSON.stringify(newMessage));
                     setMessage('');
                     scrollToBottom();
                 } else {
