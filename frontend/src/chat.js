@@ -109,7 +109,13 @@ function Chat() {
                 }));
             } else {
                 // To jest nowa wiadomość
-                setMessages((prevMessages) => [...prevMessages, data]);
+                setMessages((prevMessages) => {
+                    // Dodaj tylko jeśli nie istnieje już wiadomość o tym samym id
+                    if (data.id && prevMessages.some(msg => msg.id === data.id)) {
+                        return prevMessages;
+                    }
+                    return [...prevMessages, data];
+                });
             }
         };
 
@@ -216,7 +222,7 @@ function Chat() {
                 });
 
                 if (response.ok) {
-                    ws.current.send(JSON.stringify(newMessage));
+                    // ws.current.send(JSON.stringify(newMessage)); // USUNIĘTE! Backend sam rozsyła wiadomość przez WebSocket
                     setMessage('');
                     scrollToBottom();
                 } else {
