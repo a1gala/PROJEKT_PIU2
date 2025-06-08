@@ -1,0 +1,563 @@
+/* Import czcionki Langar z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+/* Resetowanie marginesów i paddingu, box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Domyślny styl ciała */
+body {
+    font-family: 'Langar', cursive; /* Ustawienie czcionki Langar dla całego ciała aplikacji */
+    background: radial-gradient(circle, #1a4d58, #0CB0B6);
+}
+
+/* Kontener główny chatu */
+.chat-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Wyrównanie kontenera na środku */
+    align-items: center;
+}
+
+/* Wewnętrzny kontener z odstępem między sekcjami */
+.chat-inner-container {
+    display: flex;
+    width: 80%;  /* Szerokość w stosunku do ekranu */
+    height: 50%; /* Wysokość obu okien ustawiona na 50% ekranu */
+    gap: 16%;  /* Odstęp 16% między lewym a prawym divem */
+    border-radius: 16px;  /* Zaokrąglenie rogu dla całego kontenera */
+    overflow: hidden; /* Ukrywa wszystko poza zaokrąglonym kontenerem */
+}
+
+/* Lewa część - lista użytkowników */
+.user-list {
+    width: 30%;  /* Szerokość lewej części (większa) */
+    background-color: #2d6476;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px; /* Zaokrąglenie rogu */
+    overflow-y: auto;
+    height: 85%; /* Ustalamy, by miała pełną wysokość wewnętrznego kontenera */
+    margin-right: 8%; /* Dodanie przerwy po prawej stronie lewej sekcji */
+}
+
+/* Wyszukiwarka użytkowników */
+.search input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #01C7CE;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Langar', cursive;
+}
+
+/* Lista użytkowników */
+.users {
+    flex-grow: 1;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    background-color: #3b8d9a;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Langar', cursive;
+}
+
+.user:hover {
+    background-color: #2d6476;
+}
+
+.user-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.user-image-onscreen {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Langar', cursive;
+}
+
+/* Status użytkownika */
+.status {
+    font-size: 0.85rem;
+    color: #fff;
+    margin-top: 5px;
+    font-family: 'Langar', cursive;
+}
+
+.status.online {
+    color: #2bd500; /* zielony dla online */
+}
+
+.status.offline {
+    color: #d9534f; /* czerwony dla offline */
+}
+
+/* Prawa część - chat */
+.chat-box {
+    border-radius: 16px;  /* Zaokrąglenie rogu */
+    width: 50%;  /* Szerokość prawej części (mniejsza) */
+    background-color: #1a4d58;
+    display: flex;
+    flex-direction: column;
+    height: 85%;  /* Ustalamy, by miała pełną wysokość wewnętrznego kontenera */
+    overflow: hidden;  /* Ukrywa elementy poza zaokrąglonymi rogami */
+}
+
+/* Nagłówek czatu */
+.chat-header {
+    background-color: #2d6476;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    font-family: 'Langar', cursive;
+}
+
+.chat-header h2 {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-family: 'Langar', cursive;
+}
+
+.chat-header .status {
+    font-size: 0.9rem;
+    color: #fff;
+    font-family: 'Langar', cursive;
+}
+
+/* Wiadomości */
+.messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #1a4d58;
+    font-family: 'Langar', cursive;
+}
+
+.message {
+    display: flex;
+    flex-direction: column; /* Ustawienie, że wiadomość to kolumna z imieniem/nazwiskiem i treścią */
+    margin-bottom: 15px;
+    font-family: 'Langar', cursive;
+    align-items: flex-start; /* Zachowanie domyślnego ustawienia wiadomości */
+}
+
+.message.sent {
+    align-items: flex-end; /* Wiadomości wysyłane przez użytkownika na prawo */
+}
+
+/* Stylowanie kontenera nadawcy wiadomości */
+.message-sender {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px; /* Odstęp między imieniem a wiadomością */
+    font-family: 'Langar', cursive;
+    text-align: center; /* Wyśrodkowanie imienia i nazwiska */
+}
+/* Stylowanie samego imienia i nazwiska */
+.sender-name {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.message-text {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 12px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    font-family: 'Langar', cursive;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: gray;
+    font-family: 'Langar', cursive;
+}
+
+.message.sent .message-text {
+    background-color: #01C7CE; /* Kolor tła dla wiadomości wysyłanych */
+    color: white; /* Kolor tekstu dla wiadomości wysyłanych */
+}
+
+.message.received {
+    align-items: flex-start; /* Wiadomości odbierane na lewo */
+}
+
+.message-text {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 12px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    font-family: 'Langar', cursive;
+}
+
+
+
+.ikona-message {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.ikona {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.message-text {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 12px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    font-family: 'Langar', cursive;
+}
+
+/* Stylowanie czasu wiadomości */
+.message-time {
+    font-size: 0.75rem;
+    color: gray;  /* Możesz zmienić ten kolor na coś bardziej kontrastowego, np. białe */
+    font-family: 'Langar', cursive;
+    margin-top: 5px; /* Dodaj trochę marginesu, by nie nachodziło na tekst wiadomości */
+}
+
+/* Pole wprowadzania wiadomości */
+.input-area {
+    background-color: #2d6476;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Langar', cursive;
+}
+
+.input-area input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #01C7CE;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Langar', cursive;
+}
+
+.input-area button {
+    background-color: #3b8d9a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Langar', cursive;
+}
+
+.input-area button:hover {
+    background-color: #2d6476;
+}
+
+div p {
+    color: white; /* Biały kolor czcionki */
+    font-size: 1.5rem; /* Zwiększenie rozmiaru czcionki */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin: 0; /* Usunięcie domyślnego marginesu */
+    margin-bottom: 10px; /* Dodanie odstępu między tekstem a następnymi elementami */
+    font-family: 'Langar', cursive;
+}
+
+/* Kropka statusu */
+.status-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Odstęp między kropką a awatarem */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Zielona kropka dla online */
+.online-dot {
+    background-color: #2bd500; /* Zielony */
+}
+
+/* Czerwona kropka dla offline */
+.offline-dot {
+    background-color: #d9534f; /* Czerwony */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  .chat-container, .chat-inner-container {
+    width: 100vw;
+    min-width: unset;
+    max-width: 100vw;
+    flex-direction: column;
+    padding: 0;
+  }
+  .user-list, .chat-box {
+    width: 100vw;
+    min-width: unset;
+    max-width: 100vw;
+    border-radius: 0;
+    padding: 10px;
+    height: auto;
+  }
+  .user-image, .user-image-onscreen {
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+  }
+  .chat-header h2 {
+    font-size: 1.1rem;
+  }
+  .messages {
+    padding: 8px;
+  }
+  .message-text {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .input-area input {
+    width: 60%;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .input-area button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .chat-container, .chat-inner-container {
+    width: 95vw;
+    min-width: unset;
+    max-width: 95vw;
+    padding: 0;
+  }
+  .user-list, .chat-box {
+    width: 95vw;
+    min-width: unset;
+    max-width: 95vw;
+    border-radius: 0;
+    padding: 10px;
+    height: auto;
+  }
+}
+
+/* Add styles for message reactions */
+.message-reactions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+.reaction-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.1s;
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+.reaction-btn.reacted {
+    background: #ffe066;
+    transform: scale(1.15);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.message-reactions span {
+    font-size: 0.9em;
+    color: #333;
+    margin-left: 2px;
+}
+
+.reaction-plus-btn {
+    background: none;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+    color: #888;
+    opacity: 0.7;
+    transition: color 0.15s, opacity 0.15s;
+    margin-left: 2px;
+}
+.reaction-plus-btn:hover {
+    opacity: 1;
+    color: #01C7CE;
+}
+.reactions-popup {
+    position: absolute;
+    right: 0;
+    bottom: 110%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 6px 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    animation: fadeIn 0.18s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.message-reactions {
+    display: flex;
+    gap: 4px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.reaction-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    transition: all 0.2s ease;
+    min-height: 24px;
+}
+
+.reaction-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Reakcja zostawiona przez mnie - niebieska */
+.reaction-btn.reacted.my-reaction {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.reaction-btn.reacted.my-reaction:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Reakcja zostawiona przez inną osobę - biała */
+.reaction-btn.reacted.other-reaction {
+    background: white;
+    color: #333;
+    border-color: #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reaction-btn.reacted.other-reaction:hover {
+    background: #f8f9fa;
+    border-color: #ccc;
+}
+
+/* Styl ogólny dla reakcji (gdy nie ma specyfikacji kto zostawił) */
+.reaction-btn.reacted {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.reaction-btn.reacted:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+.reaction-btn.add-reaction {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+.reaction-btn.add-reaction:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.reaction-count {
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0 3px;
+    min-width: 12px;
+    text-align: center;
+}
+
+.reaction-btn.reacted.my-reaction .reaction-count {
+    background: rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.reaction-btn.reacted.other-reaction .reaction-count {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Animacja dla nowych reakcji */
+@keyframes reactionPop {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.reaction-btn.new-reaction {
+    animation: reactionPop 0.3s ease-out;
+}

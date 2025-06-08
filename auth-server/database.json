@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "email": "latamichal88@gmail.com",
+      "password": "$2b$10$v1NUXUmxZagfIwn3bCvuF.mr7GQgTDhDp9zfhnJZoYX5Juw6m5zqu",
+      "isActive": false
+    },
+    {
+      "email": "lasdam@gmail.com",
+      "password": "$2b$10$38Hym8XsLWfYMtl/4CkXO.hrh3/4fGlFpaaaKirWREzlS5hT9sXSW",
+      "isActive": false
+    },
+    {
+      "email": "asdasd@gmial.com",
+      "password": "$2b$10$uNX0ihv14Xvut6wwePxuV.hP9.5Xa0Za2GXokioQkTUcfiextVWd.",
+      "isActive": true
+    },
+    {
+      "email": "michaelsonlata03@gmail.com",
+      "password": "$2b$10$K/uIESjMX1Co.FQXbgBh1uS2xXTLQ1NDOWfSP7BqNjG3Nj4ZRK17K",
+      "isActive": true
+    },
+    {
+      "email": "ladslsald@gmail.com",
+      "password": "$2b$10$h0rIoSxZhDYEJZd1ErhFiuOodp3bfzqisOZ2IlPJwUYfZOy1K8h8q",
+      "isActive": true
+    }
+  ]
+}

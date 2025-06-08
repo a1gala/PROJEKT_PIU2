@@ -1,0 +1,108 @@
+/* Podstawowy styl dla kontenera aktywacji */
+.activation-container {
+    display: flex; /* Użycie flexboxa do układu */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    min-height: 100vh; /* Minimalna wysokość na 100% wysokości okna */
+    background-color: rgba(21, 72, 75, 1); /* Tło w ciemnym odcieniu zieleni */
+    padding: 20px; /* Padding wewnętrzny */
+    font-family: 'Langar', cursive; /* Czcionka zgodna z logowaniem */
+}
+
+/* Styl dla głównego kontenera z białym tłem */
+.activation-content {
+    display: flex; /* Użycie flexboxa do układu obrazek + tekst */
+    flex-direction: row; /* Układ w wierszu */
+    background-color: white; /* Białe tło */
+    border-radius: 15px; /* Zaokrąglenie krawędzi */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    padding: 20px; /* Padding wewnętrzny */
+    gap: 20px; /* Odstęp między obrazkiem a tekstem */
+    max-width: 80%; /* Maksymalna szerokość kontenera */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+}
+
+/* Styl dla obrazu */
+.activation-image {
+    max-width: 40%; /* Maksymalna szerokość obrazu */
+    height: auto; /* Automatyczna wysokość w stosunku do szerokości */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Cień */
+}
+
+/* Styl dla tekstów */
+.activation-info {
+    display: flex; /* Flexbox dla tekstu */
+    flex-direction: column; /* Teksty w kolumnie */
+    gap: 10px; /* Odstęp między liniami tekstu */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    color: rgba(21, 72, 75, 1); /* Tekst w ciemnym zielonym kolorze */
+}
+
+/* Styl dla komunikatu o sukcesie aktywacji */
+.success-message  {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Wyrównanie tekstu */
+    text-justify: inter-word; /* Dodanie estetycznego rozkładu wyrazów */
+    margin-bottom: 10px;
+}
+
+/* Styl dla szczegółowych informacji */
+.error-details, .activation-info p {
+    font-size: 16px;
+}
+
+/* Styl dla przycisku */
+.login-button {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 40px; /* Zwiększona wysokość (padding góra/dół) */
+    font-size: 20px; /* Zwiększona czcionka */
+    font-family: 'Langar', cursive; /* Czcionka Langar */
+    font-weight: 300;
+    cursor: pointer;
+    background-color: rgba(21, 72, 75, 1); /* Zielony przycisk */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Zaokrąglenie krawędzi */
+    transition: background-color 0.3s ease;
+    width: px; /* Zwężony przycisk */
+    margin-top: 10px;
+    text-align: center; /* Wyśrodkowanie tekstu na przycisku */
+}
+
+.login-button:hover {
+    background-color: #005f63; /* Zmiana koloru po najechaniu */
+}
+
+.login-prompt {
+    font-size: 18px;
+    color: rgba(21, 72, 75, 0.9); /* Delikatny ciemnozielony */
+    margin-bottom: 10px; /* Odstęp od dolnego przycisku */
+    text-align: center; /* Wyśrodkowany tekst */
+    font-weight: bold; /* Średnia grubość */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  .activation-info {
+    font-size: 14px;
+    gap: 6px;
+  }
+  .success-message {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .activation-info {
+    font-size: 15px;
+    gap: 8px;
+  }
+  .success-message {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}

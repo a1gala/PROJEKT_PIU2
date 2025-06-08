@@ -1,0 +1,239 @@
+.mainContainerRegister {
+    display: flex; /* Użycie flexboxa do układu */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    min-height: 100vh; /* Minimalna wysokość na 100% wysokości okna */
+    background-color: rgba(21, 72, 75, 1); /* Tło w ciemnym odcieniu zieleni */
+    font-family: 'Langar';
+}
+
+.OptionContainerRegister {
+    background-color: white; /* Tło kontenera na biało */
+    width: 100%; /* Szerokość kontenera na 100% */
+    max-width: 500px; /* Maksymalna szerokość kontenera */
+    padding: 20px; /* Padding wewnętrzny dla lepszego wyglądu */
+    border-radius: 12px; /* Zaokrąglenie krawędzi kontenera */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Cień dla efektu głębi */
+}
+
+.titleContainerRegister {
+    font-size: 24px; /* Rozmiar czcionki tytułu */
+    font-weight: bold; /* Pogrubienie tytułu */
+    color: dimgrey; /* Kolor tytułu */
+    margin-bottom: 20px; /* Odstęp poniżej tytułu */
+    text-align: center; /* Wyśrodkowanie tytułu */
+}
+
+.welcomeContainerRegister {
+    color: rgba(21, 72, 75, 1); /* Kolor powitania */
+    font-size: 28px; /* Rozmiar czcionki powitania */
+    text-align: center; /* Wyśrodkowanie powitania */
+    margin-bottom: 20px; /* Odstęp poniżej powitania */
+}
+
+.inputContainerRegister {
+    width: 100%; /* Szerokość kontenera na 100% */
+    display: flex; /* Użycie flexboxa */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: stretch; /* Rozciąganie na całą szerokość */
+    margin-bottom: 15px; /* Odstęp poniżej kontenera */
+
+}
+
+.inputBoxRegister {
+    background-color: white; /* Tło pola na biało */
+    padding: 15px; /* Padding wewnętrzny dla pola */
+    border-radius: 8px; /* Zaokrąglenie krawędzi pola */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    width: 100%; /* Szerokość pola na 100% */
+    height: 40px; /* Ustalenie wysokości pola */
+    border: 1px solid #ccc; /* Kolor obramowania */
+    transition: border-color 0.3s; /* Płynna zmiana koloru obramowania */
+    font-family: "Julee", cursive;
+}
+
+.inputBoxRegister:focus {
+    border-color: #007bff; /* Kolor obramowania po kliknięciu */
+    outline: none; /* Usunięcie domyślnego konturu */
+}
+
+
+.errorLabelRejestracja {
+    color: #ff4d4f; /* Kolor tekstu błędu */
+    font-size: 14px; /* Rozmiar czcionki błędu */
+    margin-top: 5px; /* Odstęp powyżej etykiety błędu */
+}
+
+
+input[type="buttonregister"] {
+    border: none; /* Bez obramowania */
+    background-color: rgba(21, 72, 75, 1); /* Tło przycisku */
+    color: white; /* Kolor tekstu przycisku */
+    padding: 10px; /* Padding wewnętrzny przycisku */
+    font-size: 18px; /* Rozmiar czcionki przycisku */
+    border-radius: 25px; /* Zaokrąglenie krawędzi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    width: 100%; /* Szerokość przycisku na 100% */
+    margin-top: 10px; /* Górny margines */
+    transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+    font-family: 'Langar';
+}
+
+
+input[type="buttonregister"]:hover {
+    background-color: #005f63; /* Zmiana koloru przycisku po najechaniu */
+}
+
+
+.inputContainerRegister p {
+    font-size: 14px; /* Rozmiar czcionki dla tekstu linku */
+    color: #333; /* Kolor tekstu linku */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+
+.inputContainerRegister p a {
+    color: rgba(21, 72, 75, 1); /* Kolor linku */
+    text-decoration: none; /* Bez podkreślenia */
+}
+
+
+.inputContainerRegister p a:hover {
+    text-decoration: underline; /* Podkreślenie linku po najechaniu */
+}
+
+
+footer {
+    width: 100%; /* Szerokość stopki na 100% */
+    text-align: center; /* Wyśrodkowanie tekstu w stopce */
+    background-color: white; /* Tło stopki na biało */
+    padding: 10px 0; /* Padding w pionie w stopce */
+    position: relative; /* Pozycjonowanie względne */
+    margin-top: 20px; /* Górny margines dla oddzielenia od formularza */
+}
+
+
+footer p {
+    color: rgba(21, 72, 75, 1); /* Kolor tekstu w stopce */
+    margin: 0; /* Usunięcie marginesu */
+    font-size: 16px; /* Rozmiar czcionki w stopce */
+}
+
+
+.icon-container {
+    display: flex; /* Użycie flexboxa do układu */
+    justify-content: center; /* Wyśrodkowanie ikonek w poziomie */
+    align-items: center; /* Wyśrodkowanie ikonek w pionie */
+    margin: 20px 0; /* Odstępy od góry i dołu */
+}
+
+
+.icon {
+    font-size: 24px; /* Rozmiar ikonki */
+    color: #333; /* Kolor ikony */
+    margin: 0 10px; /* Odstęp między ikonami */
+    transition: color 0.3s; /* Płynna zmiana koloru */
+}
+
+
+.icon:hover {
+    color: #007bff; /* Zmiana koloru ikony po najechaniu */
+}
+
+/* Styl dla ikonki Facebook */
+.icon-facebook {
+    font-size: 30px;
+}
+
+/* Styl dla ikonki Instagram */
+.icon-instagram {
+    font-size: 30px;
+}
+
+/* Styl dla ikonki Twitter */
+.icon-twitter {
+    font-size: 30px;
+}
+
+/* Nowe style dla komunikatów */
+.successMessageRegister {
+    background-color: rgba(21, 72, 75, 1); /* Ciemny zielony kolor tła dla sukcesu */
+    color: white; /* Ciemnozielony kolor tekstu */
+    padding: 15px; /* Padding wewnętrzny dla komfortowego wyglądu */
+    border-radius: 8px; /* Zaokrąglenie krawędzi */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Cień dla efektu głębi */
+    width: 100%; /* Szerokość na 100% */
+    margin-bottom: 20px; /* Odstęp poniżej komunikatu */
+    font-size: 16px; /* Rozmiar czcionki */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    letter-spacing: 1px;
+}
+
+.errorMessageRegister {
+    background-color: #f8d7da; /* Czerwony kolor tła dla błędu */
+    color: #721c24; /* Ciemnoczerwony kolor tekstu */
+    padding: 15px; /* Padding wewnętrzny */
+    border-radius: 10px; /* Zaokrąglenie krawędzi */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Cień */
+    width: 100%; /* Szerokość na 100% */
+    margin-bottom: 25px; /* Odstęp poniżej komunikatu */
+    font-size: 16px; /* Rozmiar czcionki */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Styl dla linku w komunikacie o sukcesie */
+.successMessageRegister a {
+    color: white; /* Biały kolor linku */
+    text-decoration: none; /* Brak podkreślenia */
+    font-weight: bold; /* Pogrubienie linku */
+    transition: color 0.3s; /* Płynna zmiana koloru */
+    letter-spacing: 2px;
+}
+
+.successMessageRegister a:hover {
+    color: grey; /* Szary kolor po najechaniu */
+}
+
+/* Styl dla linku w komunikacie o błędzie */
+.errorMessageRegister a {
+    color: #721c24; /* Ciemnoczerwony kolor linku */
+    text-decoration: none; /* Brak podkreślenia */
+    font-weight: bold; /* Pogrubienie linku */
+    transition: color 0.3s; /* Płynna zmiana koloru */
+}
+
+.errorMessageRegister a:hover {
+    color: #49121a; /* Ciemniejszy czerwony kolor po najechaniu */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  .inputContainerRegister, .inputContainerRegister p, .inputContainerRegister p a {
+    font-size: 13px;
+  }
+  .icon-container {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .inputContainerRegister input, .inputContainerRegister button {
+    font-size: 14px;
+    padding: 8px;
+  }
+  footer {
+    font-size: 13px;
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .inputContainerRegister input, .inputContainerRegister button {
+    font-size: 15px;
+    padding: 10px;
+  }
+  footer {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}

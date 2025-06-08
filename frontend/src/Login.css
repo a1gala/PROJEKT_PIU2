@@ -1,0 +1,199 @@
+/* Kontener główny */
+.mainContainerLogin {
+    display: flex; /* Użycie flexboxa do układu */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    min-height: 100vh; /* Minimalna wysokość na 100% wysokości okna */
+    background-color: rgba(21, 72, 75, 1); /* Tło w ciemnym odcieniu zieleni */
+    font-family: 'Langar';
+}
+
+/* Główny kontener opcji logowania */
+.OptionContainerLogin {
+    background-color: white; /* Tło kontenera na biało */
+    width: 100%; /* Szerokość kontenera na 100% */
+    max-width: 500px; /* Maksymalna szerokość kontenera */
+    padding: 20px; /* Padding wewnętrzny dla lepszego wyglądu */
+    border-radius: 12px; /* Zaokrąglenie krawędzi kontenera */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Cień dla efektu głębi */
+}
+
+/* Tytuł */
+.titleContainerLogin {
+    font-size: 24px; /* Rozmiar czcionki tytułu */
+    font-weight: bold; /* Pogrubienie tytułu */
+    color: dimgrey; /* Kolor tytułu */
+    margin-bottom: 20px; /* Odstęp poniżej tytułu */
+    text-align: center; /* Wyśrodkowanie tytułu */
+}
+
+/* Powitanie */
+.welcomeContainerLogin {
+    color: rgba(21, 72, 75, 1); /* Kolor powitania */
+    font-size: 28px; /* Rozmiar czcionki powitania */
+    text-align: center; /* Wyśrodkowanie powitania */
+    margin-bottom: 20px; /* Odstęp poniżej powitania */
+}
+
+/* Kontenery dla pól wejściowych */
+.inputContainerLogin {
+    width: 100%; /* Szerokość kontenera na 100% */
+    display: flex; /* Użycie flexboxa */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: stretch; /* Rozciąganie na całą szerokość */
+    margin-bottom: 15px; /* Odstęp poniżej kontenera */
+
+}
+
+/* Pola wejściowe */
+.inputBoxLogin {
+    background-color: white; /* Tło pola na biało */
+    padding: 15px; /* Padding wewnętrzny dla pola */
+    border-radius: 8px; /* Zaokrąglenie krawędzi pola */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    width: 100%; /* Szerokość pola na 100% */
+    height: 40px; /* Ustalenie wysokości pola */
+    border: 1px solid #ccc; /* Kolor obramowania */
+    transition: border-color 0.3s; /* Płynna zmiana koloru obramowania */
+    font-family: "Julee", cursive;
+}
+
+/* Stylizacja pola po kliknięciu */
+.inputBoxLogin:focus {
+    border-color: #007bff; /* Kolor obramowania po kliknięciu */
+    outline: none; /* Usunięcie domyślnego konturu */
+}
+
+/* Etykiety błędów */
+.errorLabelLogin {
+    color: #ff4d4f; /* Kolor tekstu błędu */
+    font-size: 14px; /* Rozmiar czcionki błędu */
+    margin-top: 5px; /* Odstęp powyżej etykiety błędu */
+}
+
+/* Przycisk logowania */
+input[type="buttonlogin"] {
+    border: none; /* Bez obramowania */
+    background-color: rgba(21, 72, 75, 1); /* Tło przycisku */
+    color: white; /* Kolor tekstu przycisku */
+    padding: 10px; /* Padding wewnętrzny przycisku */
+    font-size: 18px; /* Rozmiar czcionki przycisku */
+    border-radius: 25px; /* Zaokrąglenie krawędzi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    width: 100%; /* Szerokość przycisku na 100% */
+    margin-top: 10px; /* Górny margines */
+    transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+}
+
+/* Efekt najechania na przycisk */
+input[type="buttonlogin"]:hover {
+    background-color: #005f63; /* Zmiana koloru przycisku po najechaniu */
+}
+
+/* Link do rejestracji */
+.inputContainerLogin p {
+    font-size: 14px; /* Rozmiar czcionki dla tekstu linku */
+    color: #333; /* Kolor tekstu linku */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Styl linku rejestracji */
+.inputContainerLogin p a {
+    color: rgba(21, 72, 75, 1); /* Kolor linku */
+    text-decoration: none; /* Bez podkreślenia */
+}
+
+/* Efekt najechania na link */
+.inputContainerLogin p a:hover {
+    text-decoration: underline; /* Podkreślenie linku po najechaniu */
+}
+
+/* Stopka */
+footer {
+    width: 100%; /* Szerokość stopki na 100% */
+    text-align: center; /* Wyśrodkowanie tekstu w stopce */
+    background-color: white; /* Tło stopki na biało */
+    padding: 10px 0; /* Padding w pionie w stopce */
+    position: relative; /* Pozycjonowanie względne */
+    margin-top: 20px; /* Górny margines dla oddzielenia od formularza */
+}
+
+/* Styl tekstu w stopce */
+footer p {
+    color: rgba(21, 72, 75, 1); /* Kolor tekstu w stopce */
+    margin: 0; /* Usunięcie marginesu */
+    font-size: 16px; /* Rozmiar czcionki w stopce */
+}
+
+/* Kontener dla ikonek */
+.icon-container {
+    display: flex; /* Użycie flexboxa do układu */
+    justify-content: center; /* Wyśrodkowanie ikonek w poziomie */
+    align-items: center; /* Wyśrodkowanie ikonek w pionie */
+    margin: 20px 0; /* Odstępy od góry i dołu */
+}
+
+/* Styl dla pojedynczej ikonki */
+.icon {
+    font-size: 24px; /* Rozmiar ikonki */
+    color: #333; /* Kolor ikony */
+    margin: 0 10px; /* Odstęp między ikonami */
+    transition: color 0.3s; /* Płynna zmiana koloru */
+}
+
+/* Efekt po najechaniu myszą na ikonkę */
+.icon:hover {
+    color: #007bff; /* Zmiana koloru ikony po najechaniu */
+}
+
+/* Styl dla ikonki Facebook */
+.icon-facebook {
+    font-size: 30px;
+}
+
+/* Styl dla ikonki Instagram */
+.icon-instagram {
+    font-size: 30px;
+}
+
+/* Styl dla ikonki Twitter */
+.icon-twitter {
+    font-size: 30px;
+}
+
+.globalError {
+    color: #ff4d4f; /* Kolor czerwony dla komunikatu o błędzie */
+    font-size: 14px; /* Rozmiar czcionki komunikatu */
+    margin-top: 10px; /* Odstęp od elementów powyżej */
+    text-align: center; /* Wyśrodkowanie komunikatu */
+    padding: 10px; /* Padding wewnętrzny dla lepszego wyglądu */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  footer {
+    font-size: 13px;
+    padding: 5px 0;
+  }
+  .icon-container {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .icon {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+  .icon {
+    font-size: 22px;
+    margin: 0 8px;
+  }
+}

@@ -1,0 +1,304 @@
+/* src/PostBoard.css */
+.postboard-container-unique {
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    position: relative; /* To allow absolute positioning inside it */
+}
+
+.postboard-container-unique {
+    margin-left: calc(30vw + 100px); /* Push content to the right to make space for the sidebar */
+}
+
+/* Sidebar for UserPanel */
+.userpanel-container {
+    margin: auto;
+    margin-left: 0px;
+    height: 100%;
+    width: content; /* Fixed width for the sidebar */
+    flex-shrink: 0; /* Prevents it from shrinking */
+    position: absolute;
+}
+
+form.postboard-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+textarea.postboard-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    font-size: 16px;
+    color: #333; /* Kolor tekstu na ciemny (czarny) */
+    background-color: #f4f4f4; /* Jasne szare tło */
+}
+
+button.postboard-button {
+    padding: 10px 20px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.postboard-button:hover {
+    background-color: #365899;
+}
+
+ul.postboard-posts-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.postboard-post-item {
+    background-color: #f9f9f9; /* Jasne szare tło dla postów */
+    color: #333; /* Ciemny kolor tekstu w postach */
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-user-info {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.post-content {
+    margin-top: 10px; /* Przerwa między mailem użytkownika a treścią posta */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.postboard-post-date {
+    margin-top: 10px; /* Przerwa między treścią posta a datą */
+    color: #888; /* Ciemnoszary kolor dla daty */
+    font-size: 0.9em;
+}
+
+.black-text2 {
+    color: black;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.black-text3 {
+    color: black;
+}
+
+.comments-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    position: relative;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px; /* Maksymalna wysokość sekcji komentarzy */
+    overflow-y: auto; /* Włączenie scrollowania */
+    margin: 10px 0;
+    padding-right: 10px;
+}
+
+.comment-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.comment-form {
+    margin-top: 15px;
+}
+
+.comment-textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+.comment-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styl dla przycisku rozwijania/zwijania komentarzy */
+.toggle-comments-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-comments-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styl dla liczby komentarzy */
+.comments-count {
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.comments-count:hover {
+    text-decoration: underline;
+}
+
+.no-comments-text {
+    color: #666;
+}
+
+.comment-item p {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word; /* Zawijanie słów w przypadku długich ciągów tekstu */
+    word-break: break-word; /* Zawijanie tekstu, aby nie wychodził poza kontener */
+    color: black; /* Ustawia kolor tekstu na czarny */
+    font-size: 14px; /* Zmniejsza rozmiar czcionki */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST - naprawa kolizji i nadpisywanie szerokości */
+@media (max-width: 600px) {
+  .postboard-container-unique {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .main-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .userpanel-container {
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+  }
+  form.postboard-form {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+  ul.postboard-posts-list {
+    padding: 0 !important;
+  }
+  li.postboard-post-item {
+    padding: 8px !important;
+    font-size: 15px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .post-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .post-user-image, .user-icon {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 4px !important;
+  }
+  .post-user-info {
+    font-size: 13px !important;
+  }
+  .post-content, .black-text2 {
+    font-size: 13px !important;
+  }
+  .comments-section {
+    padding-top: 4px !important;
+  }
+  .comment-item {
+    font-size: 12px !important;
+    padding: 4px !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .postboard-container-unique {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    border-radius: 4px !important;
+  }
+  .main-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .userpanel-container {
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+  }
+}

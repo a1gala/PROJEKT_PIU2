@@ -1,0 +1,157 @@
+/* Kontener główny */
+.forgotPasswordSite {
+    display: flex; /* Użycie flexboxa do układu */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    min-height: 100vh; /* Minimalna wysokość na 100% wysokości okna */
+    background-color: rgba(21, 72, 75, 1); /* Tło w ciemnym odcieniu zieleni */
+    font-family: 'Langar';
+}
+
+/* Główny kontener formularza zapomnianego hasła */
+.forgotPasswordForm {
+    background-color: white; /* Tło formularza na biało */
+    width: 100%; /* Szerokość formularza na 100% */
+    max-width: 500px; /* Maksymalna szerokość formularza */
+    padding: 20px; /* Padding wewnętrzny dla lepszego wyglądu */
+    border-radius: 12px; /* Zaokrąglenie krawędzi formularza */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Cień dla efektu głębi */
+}
+
+/* Tytuł formularza */
+.forgotPasswordForm h2 {
+    font-size: 24px; /* Rozmiar czcionki tytułu */
+    font-weight: bold; /* Pogrubienie tytułu */
+    color: dimgrey; /* Kolor tytułu */
+    margin-bottom: 20px; /* Odstęp poniżej tytułu */
+    text-align: center; /* Wyśrodkowanie tytułu */
+}
+
+/* Opis formularza */
+.forgotPasswordForm p {
+    font-size: 16px; /* Rozmiar czcionki opisu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin-bottom: 20px; /* Odstęp poniżej opisu */
+    color: rgba(21, 72, 75, 1); /* Kolor tekstu */
+}
+
+/* Kontener dla pola wejściowego e-mail */
+.inputContainerForgotPassword {
+    width: 100%; /* Szerokość kontenera na 100% */
+    display: flex; /* Użycie flexboxa */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: stretch; /* Rozciąganie na całą szerokość */
+    margin-bottom: 15px; /* Odstęp poniżej kontenera */
+}
+
+/* Pole wejściowe e-mail */
+.emailInput {
+    background-color: white; /* Tło pola na biało */
+    padding: 15px; /* Padding wewnętrzny dla pola */
+    border-radius: 8px; /* Zaokrąglenie krawędzi pola */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    width: 100%; /* Szerokość pola na 100% */
+    height: 40px; /* Ustalenie wysokości pola */
+    border: 1px solid #ccc; /* Kolor obramowania */
+    transition: border-color 0.3s; /* Płynna zmiana koloru obramowania */
+    font-family: "Julee", cursive;
+}
+
+/* Stylizacja pola po kliknięciu */
+.emailInput:focus {
+    border-color: #007bff; /* Kolor obramowania po kliknięciu */
+    outline: none; /* Usunięcie domyślnego konturu */
+}
+
+/* Etykieta błędu dla e-mail */
+.errorMessage {
+    color: #ff4d4f; /* Kolor tekstu błędu */
+    font-size: 14px; /* Rozmiar czcionki błędu */
+    margin-top: 5px; /* Odstęp powyżej etykiety błędu */
+}
+
+/* Przycisk do wysyłania formularza */
+.submitButton {
+    font-family: 'Langar';
+    border: none; /* Bez obramowania */
+    background-color: rgba(21, 72, 75, 1); /* Tło przycisku */
+    color: white; /* Kolor tekstu przycisku */
+    padding: 10px; /* Padding wewnętrzny przycisku */
+    font-size: 18px; /* Rozmiar czcionki przycisku */
+    border-radius: 25px; /* Zaokrąglenie krawędzi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    width: 100%; /* Szerokość przycisku na 100% */
+    margin-top: 10px; /* Górny margines */
+    transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+}
+
+/* Efekt najechania na przycisk */
+.submitButton:hover {
+    background-color: #005f63; /* Zmiana koloru przycisku po najechaniu */
+}
+
+/* Sekcja z wiadomościami */
+.message {
+    font-size: 16px; /* Rozmiar czcionki wiadomości */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin-top: 20px; /* Odstęp od góry */
+    color: rgba(21, 72, 75, 1); /* Kolor tekstu */
+}
+
+/* Link do powrotu do logowania */
+.backToLogin {
+    margin-top: 20px; /* Górny margines */
+    text-align: center; /* Wyśrodkowanie linku */
+}
+
+.backLink {
+    font-size: 14px; /* Rozmiar czcionki linku */
+    color: rgba(21, 72, 75, 1); /* Kolor linku */
+    text-decoration: none; /* Bez podkreślenia */
+}
+
+/* Efekt najechania na link */
+.backLink:hover {
+    text-decoration: underline; /* Podkreślenie linku po najechaniu */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  .forgotPasswordForm {
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .forgotPasswordForm h2 {
+    font-size: 18px;
+  }
+  .forgotPasswordForm p {
+    font-size: 13px;
+  }
+  .inputContainerForgotPassword {
+    margin-bottom: 8px;
+  }
+  .emailInput {
+    padding: 10px;
+    font-size: 14px;
+    height: 32px;
+  }
+  .submitButton {
+    font-size: 15px;
+    padding: 8px;
+  }
+  .message {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .forgotPasswordForm {
+    padding: 15px;
+  }
+  .forgotPasswordForm h2 {
+    font-size: 20px;
+  }
+}

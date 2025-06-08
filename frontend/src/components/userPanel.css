@@ -1,0 +1,270 @@
+/* User Panel Block */
+.user-panel-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: rgba(21, 72, 75, 0.9);
+    color: white;
+    padding: 20px;
+    font-family: "Langar", cursive;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    overflow-y: auto;
+    overflow-x: visible; /* Ensure horizontal overflow is visible */
+    position: relative;
+}
+
+/* Panel Title */
+.user-panel-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Search Box */
+.user-panel-search-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white; /* Ensure the default text is white */
+}
+.user-panel-search-box::placeholder{
+    color: white;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tabs button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%; /* Make buttons take up full width */
+    font-family: "Langar", cursive; /* Set the font to Langar */
+}
+
+.tabs button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tabs button.selected {
+    background-color: rgba(30, 100, 105, 1);
+    font-weight: bold;
+}
+
+/* User List Styles */
+.user-panel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: show;
+}
+
+/* Invisible scrollbar for WebKit browsers */
+.user-panel-list::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.user-panel-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: rgba(25, 88, 93, 0.8);
+    transition: background-color 0.3s;
+    position: relative;
+    width: 100%; /* Ensures the entire item takes up available space */
+    overflow: visible; /* Allow the dropdown to overflow outside of the item */
+}
+
+.user-panel-item:hover {
+    background-color: rgba(30, 98, 104, 0.8);
+}
+
+/* Status Indicator */
+.user-panel-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-panel-status.online {
+    background-color: green;
+}
+
+.user-panel-status.offline {
+    background-color: red;
+}
+
+/* Avatar */
+.user-panel-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Name */
+.user-panel-name {
+    flex: 1;
+    font-size: 16px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-options-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Default position below the user item */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(25, 88, 93, 0.95); /* More solid background for better clarity */
+    border-radius: 8px;
+    padding: 12px; /* More space for the content */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for clearer separation */
+    z-index: 1000; /* Ensure the dropdown is above other elements */
+    width: 180px; /* Fixed dropdown width */
+    max-height: 250px; /* Limit the max-height */
+    overflow-y: auto; /* Scroll if content overflows */
+    font-family: 'Langar', cursive; /* Ensure Langar font is applied */
+    color: #fff; /* Light text for high contrast */
+    opacity: 0.95; /* Slight opacity to make it visually distinct */
+}
+
+/* Ensure buttons in the dropdown also use Langar font */
+.user-options-button {
+    font-family: 'Langar', cursive; /* Apply Langar font */
+    width: 100%;
+    padding: 10px; /* Slightly larger button for ease of clicking */
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.15); /* Slightly darker background for better clarity */
+    color: #fff; /* White text for better contrast */
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    font-size: 14px; /* Make text legible */
+}
+
+/* Ensure any other text inside the dropdown uses Langar font */
+.user-options-dropdown * {
+    font-family: 'Langar', cursive; /* Apply Langar font universally inside dropdown */
+}
+
+.user-panel-item:hover .user-options-dropdown {
+    display: block;
+}
+
+/* Adjust dropdown position when near the bottom or top */
+.user-panel-item.dropdown-up .user-options-dropdown {
+    top: auto;
+    bottom: 100%; /* Show the dropdown above */
+    transform: translateX(-50%) translateY(-10px); /* Slight offset for better visibility */
+}
+
+/* Dropdown button styles */
+.user-options-button {
+    width: 100%;
+    padding: 10px; /* Slightly larger button for ease of clicking */
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.15); /* Slightly darker background for better clarity */
+    color: #fff; /* White text for better contrast */
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    font-size: 14px; /* Make text legible */
+}
+
+.user-options-button:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Darken button slightly on hover */
+    color: #fff; /* Ensure the text remains white on hover */
+}
+
+.user-panel-no-users {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.post-user-name {
+    color: black;
+}
+.post-user-email {
+    color: black;
+    margin-left: 10px; /* Dodaj przestrzeń po lewej stronie tekstu (od ikony) */
+}
+.post-header .user-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  .user-panel-block {
+    position: static;
+    width: 100vw;
+    min-width: unset;
+    max-width: 100vw;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .user-panel-title {
+    font-size: 18px;
+  }
+  .user-panel-list {
+    max-height: 40vh;
+  }
+  .user-panel-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .user-panel-name {
+    font-size: 14px;
+  }
+  .tabs button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .user-panel-block {
+    width: 100vw;
+    min-width: unset;
+    max-width: 100vw;
+    left: 0;
+    top: 0;
+    padding: 15px;
+  }
+}

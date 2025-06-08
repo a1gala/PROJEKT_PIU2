@@ -1,0 +1,244 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #1a4d58, #0CB0B6);
+}
+
+.mainprofile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.profile-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.profile-actions .status {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.profile-actions .status.inactive {
+    color: red;
+}
+
+
+.inputButtonProfile:hover {
+    background-color: #005f63;
+}
+
+.profile-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.profile-info p.email {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2e3d42;
+    text-align: left;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2e3d42;
+    padding-bottom: 10px;
+}
+
+.profile-info .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.edit-textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+.tab-buttons {
+    display: flex; /* Ustawia kontener jako Flexbox */
+    gap: 10px; /* Odstęp między przyciskami */
+    margin-bottom: 20px; /* Odstęp poniżej całej grupy przycisków */
+}
+
+.tab-buttons button,
+.inputButtonProfile,
+.edit-button,
+.save-button,
+.cancel-button {
+    font-family: "Langar";
+    border: none;
+    background-color: #005f63;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inputButtonProfile:hover,
+.edit-button:hover,
+.save-button:hover,
+.cancel-button:hover {
+    background-color: #008b94;
+}
+
+.cancel-button {
+    background-color: #d9534f;
+}
+
+.cancel-button:hover {
+    background-color: #c9302c;
+}
+
+.post-headerr {
+    background-color: #f9f9f9; /* Jasne szare tło dla postów */
+    color: #333; /* Ciemny kolor tekstu w postach */
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postywprofilu {
+    margin-top: 10px; /* Przerwa między mailem użytkownika a treścią posta */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.postywprofilu .user-info {
+    display: flex;          /* Układ flexbox */
+    flex-direction: row;    /* Układ elementów w poziomie */
+    align-items: center;    /* Wyśrodkowanie elementów w pionie */
+}
+
+
+.postywprofilu .user-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.postywprofilu .user-info {
+
+}
+
+.profil-posty-dane .post-user-name {
+    font-weight: bold;
+    color: #333;
+    display: block; /* Imię i nazwisko jako blok */
+    margin-bottom: 5px; /* Odstęp między nazwiskiem a e-mailem */
+}
+
+.profil-posty-dane .post-user-email {
+    display: block; /* E-mail w nowej linii */
+}
+
+
+.postywprofilu .post-content {
+    display: block; /* Ustawiamy post-content na blok */
+    margin-top: 10px; /* Odstęp między post-content a post-date */
+}
+
+.postywprofilu .post-date {
+    display: block; /* Ustawiamy post-date na blok */
+    margin-top: 5px; /* Odstęp między post-content a post-date */
+}
+
+/* RESPONSYWNOŚĆ: MOBILE FIRST */
+@media (max-width: 600px) {
+  .mainprofile {
+    max-width: 100vw;
+    width: 98vw;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  .profile-info p.email {
+    font-size: 1rem;
+    padding-bottom: 5px;
+  }
+  .tab-buttons button, .inputButtonProfile, .edit-button, .save-button, .cancel-button {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  .postywprofilu .user-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+  }
+  .profil-posty-dane .post-user-name, .profil-posty-dane .post-user-email {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .mainprofile {
+    max-width: 95vw;
+    width: 90vw;
+    padding: 15px;
+  }
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
