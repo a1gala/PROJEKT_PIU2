@@ -25,8 +25,8 @@ Projekt został zbudowany przy użyciu:
 ### 1. Klonowanie repozytorium
 
 ```bash
-git clone https://github.com/LataM88/MWO_Projekt.git
-cd MWO_Projekt
+git clone https://github.com/a1gala/PROJEKT_PIU2
+cd PROJEKT_PIU2
 
 backend ->
 cd auth-server
