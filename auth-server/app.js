@@ -242,7 +242,7 @@ app.post('/register', async (req, res) => {
 
 
 const mailOptions = {
-    from: '"ProjektMWO2024" <projekt.mwo24@gmail.com>', // Nadawca
+    from: '"ProjektPIU2" <projekt.piu2@gmail.com>', // Nadawca
     to: email, // Odbiorca
     subject: 'Link weryfikacyjny',
     html: `
@@ -330,7 +330,7 @@ app.post('/auth', async (req, res) => {
     }
     // Wysyłanie kodu 2FA e-mailem (jedno wywołanie)
     const mailOptions = {
-        from: '"ProjektMWO2024" <projekt.mwo24@gmail.com>', // Nadawca
+        from: '"ProjektPIU2" <projekt.piu2@gmail.com>', // Nadawca
         to: email, // Odbiorca
         subject: 'Kod weryfikacyjny',
         html: `
@@ -474,8 +474,8 @@ app.get('/api/users', verifyAccessToken, async (_req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'projekt.mwo24@gmail.com',
-        pass: 'dokr ytzb odhi ytgs'
+        user: 'projekt.piu2@gmail.com',
+        pass: 'hsaf vjmp fpsk brps'
     }
 });
 
@@ -509,7 +509,7 @@ app.post('/forgot-password', async (req, res) => {
 
     // Wysyłanie kodu resetu na e-mail użytkownika
 const mailOptions = {
-    from: '"ProjektMWO2024" <projekt.mwo24@gmail.com>', // Nadawca
+    from: '"ProjektPIU2" <projekt.piu2@gmail.com>', // Nadawca
     to: email, // Odbiorca
     subject: 'Kod resetu hasła',
     html: `
